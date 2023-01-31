@@ -8,9 +8,11 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier --write ."
   },
   "dependencies": {
-    "astro": "^2.0.2"
+    "astro": "^2.0.2",
+    "prettier-plugin-astro": "^0.8.0"
   }
 }
