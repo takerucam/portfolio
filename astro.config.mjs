@@ -1,13 +1,10 @@
 import { defineConfig } from "astro/config";
 import preact from "@astrojs/preact";
-import node from "@astrojs/node";
-
-// https://astro.build/config
-import netlify from "@astrojs/netlify/functions";
+import netlify from "@astrojs/netlify/edge-functions";
 
 // https://astro.build/config
 export default defineConfig({
   output: "server",
   integrations: [preact()],
-  adapter: netlify()
+  adapter: netlify(),
 });
