@@ -1,0 +1,20 @@
+---
+import dayjs from 'dayjs'
+---
+
+<div
+  class='duration-20 flex h-[110px] w-[350px] items-center rounded-lg border-[1px] border-border px-5 shadow-blog transition hover:bg-gray-100'
+>
+  <img
+    src='https://help.twitter.com/content/dam/help-twitter/brand/logo.png'
+    alt='icon'
+    class='h-14 w-14 rounded-full'
+  />
+  <div class='w-full pl-5'>
+    <p class='text-xl font-bold'>ブログタイトル</p>
+    <p class='w-[200px] truncate pt-1 text-xs text-surfaceText'>
+      ブログコメントだよブログコメントだよブログコメントだよブログコメントだよブログコメントだよ
+    </p>
+    <p class='text-end text-[10px] text-surfaceText'>{dayjs().format('YYYY/MM/DD')}</p>
+  </div>
+</div>

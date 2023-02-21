@@ -1,13 +1,18 @@
-import { defineConfig } from "astro/config";
-import preact from "@astrojs/preact";
-import node from "@astrojs/node";
+import { defineConfig } from 'astro/config'
+import cloudflare from '@astrojs/cloudflare'
+import tailwind from '@astrojs/tailwind'
 
 // https://astro.build/config
-import netlify from "@astrojs/netlify/functions";
+import preact from '@astrojs/preact'
+
+// https://astro.build/config
 
 // https://astro.build/config
 export default defineConfig({
-  output: "server",
-  integrations: [preact()],
-  adapter: netlify()
-});
+  // これを入れるとSSRができるようになる
+  output: 'server',
+  adapter: cloudflare({
+    mode: 'advanced',
+  }),
+  integrations: [tailwind(), preact()],
+})
