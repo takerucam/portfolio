@@ -1,20 +1,25 @@
 ---
 import dayjs from 'dayjs'
+const { url, imageUrl, title, description, pubDate } = Astro.props
+interface Props {
+  url: string
+  imageUrl: string
+  title: string
+  description: string
+  pubDate: string
+}
 ---
 
-<div
+<a
+  href={`/${url}`}
   class='duration-20 flex h-[110px] w-[350px] items-center rounded-lg border-[1px] border-border px-5 shadow-blog transition hover:bg-gray-100'
 >
-  <img
-    src='https://help.twitter.com/content/dam/help-twitter/brand/logo.png'
-    alt='icon'
-    class='h-14 w-14 rounded-full'
-  />
+  <img src={`${imageUrl}`} alt='icon' class='h-14 w-14 rounded-full' />
   <div class='w-full pl-5'>
-    <p class='text-xl font-bold'>ブログタイトル</p>
+    <p class='text-xl font-bold'>{title}</p>
     <p class='w-[200px] truncate pt-1 text-xs text-surfaceText'>
-      ブログコメントだよブログコメントだよブログコメントだよブログコメントだよブログコメントだよ
+      {description}
     </p>
-    <p class='text-end text-[10px] text-surfaceText'>{dayjs().format('YYYY/MM/DD')}</p>
+    <p class='text-end text-[10px] text-surfaceText'>{dayjs(pubDate).format('YYYY/MM/DD')}</p>
   </div>
-</div>
+</a>
