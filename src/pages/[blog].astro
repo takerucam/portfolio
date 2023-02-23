@@ -9,7 +9,7 @@ export async function getStaticPaths() {
 }
 const { entry } = Astro.props
 const { Content } = await entry.render()
+export const prerender = true
 ---
 
-<h1>{entry.data.title}</h1>
 <Content />
