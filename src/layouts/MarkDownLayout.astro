@@ -6,10 +6,10 @@ interface Props {
 import type { CollectionEntry } from 'astro:content'
 import BaseLayout from 'src/layouts/BaseLayout.astro'
 
-const { blog } = Astro.props
+const { frontmatter } = Astro.props
 ---
 
 <BaseLayout>
-  <h1>{blog.title}</h1>
+  <h1>{frontmatter.title}</h1>
   <slot />
 </BaseLayout>
