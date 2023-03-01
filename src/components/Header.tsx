@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <header className='sticky top-0 flex h-16 items-center justify-between bg-headerBackground px-6'>
-      <p>あかぱっくんのブログ</p>
+      <p>muchimuchi.takeru.dev のブログ</p>
       <nav className='invisible sm:visible'>
         <ul className='flex gap-6'>
           <li className='flex h-8 items-center p-2 transition duration-500 hover:font-bold'>

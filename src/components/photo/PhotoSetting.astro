@@ -1,0 +1,16 @@
+---
+interface Props {
+  url: string
+  text: string
+  style?: string
+}
+
+const { url, text, style } = Astro.props
+---
+
+<div class={`flex ${style}`}>
+  <img src={`/${url}`} alt='カメラ画像' class='h-7 w-7' />
+  <div class='flex items-center'>
+    <p class='pl-2 text-[9px] text-surfaceText'>{text}</p>
+  </div>
+</div>

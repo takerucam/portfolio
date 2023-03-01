@@ -2,11 +2,8 @@ import { defineConfig } from 'astro/config'
 import cloudflare from '@astrojs/cloudflare'
 import node from '@astrojs/node'
 import tailwind from '@astrojs/tailwind'
-
-// https://astro.build/config
 import preact from '@astrojs/preact'
-
-// https://astro.build/config
+import image from '@astrojs/image'
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,5 +15,5 @@ export default defineConfig({
   adapter: node({
     mode: 'standalone',
   }),
-  integrations: [tailwind(), preact()],
+  integrations: [tailwind(), preact(), image()],
 })
