@@ -1,0 +1,42 @@
+---
+import { Image } from '@astrojs/image/components'
+import dayjs from 'dayjs'
+import PhotoSetting from 'src/components/photo/PhotoSetting.astro'
+interface Props {
+  url: string
+  imageUrl: string
+  camera: string
+  setting: string
+  lens: string
+  location: string
+  pubDate: string
+}
+
+const { url, imageUrl, camera, setting, lens, location, pubDate } = Astro.props
+---
+
+<a
+  href={`/photos/${url}`}
+  class='duration-20 w-[330px] rounded-lg border-[1px] border-border shadow-blog transition hover:bg-gray-100'
+>
+  <Image src={imageUrl} alt='icon' width={330} height={220} format='avif' class='rounded-t-lg' />
+  <div class='mx-5 mt-4 flex w-full'>
+    <div class='w-1/2'>
+      <PhotoSetting url='camera.png' text={camera} />
+      <PhotoSetting url='lens.png' text={lens} style='mt-5' />
+    </div>
+    <div>
+      <PhotoSetting url='setting.png' text={setting} />
+      <PhotoSetting url='location.png' text={location} style='mt-5' />
+    </div>
+  </div>
+  <p class='mr-3 mb-3 text-end text-[8px] text-surfaceText'>
+    {dayjs(pubDate).format('YYYY/MM/DD')}
+  </p>
+</a>
+
+<script>
+  document.querySelector('.img')?.addEventListener('load', () => {
+    console.log('loadされた')
+  })
+</script>

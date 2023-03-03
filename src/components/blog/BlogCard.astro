@@ -1,0 +1,32 @@
+---
+import dayjs from 'dayjs'
+import { Image } from '@astrojs/image/components'
+
+interface Props {
+  url: string
+  imageUrl: string
+  title: string
+  description: string
+  pubDate: string
+}
+const { url, imageUrl, title, description, pubDate } = Astro.props
+---
+
+<a
+  href={`/blogs/${url}`}
+  class='duration-20 flex h-[110px] w-[350px] items-center rounded-lg border-[1px] border-border px-5 shadow-blog transition hover:bg-gray-100'
+>
+  <Image
+    src={`${imageUrl}`}
+    alt='icon'
+    class={`rounded-full`}
+    width={56}
+    height={56}
+    format='avif'
+  />
+  <div class='w-full pl-5'>
+    <p class='text-xl font-bold'>{title}</p>
+    <p class='w-[200px] truncate pt-1 text-xs text-surfaceText'>{description}</p>
+    <p class='text-end text-[10px] text-surfaceText'>{dayjs(pubDate).format('YYYY/MM/DD')}</p>
+  </div>
+</a>

@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content'
+import PhotoCard from 'src/components/photo/PhotoCard.astro'
+import BaseLayout from 'src/layouts/BaseLayout.astro'
+import '../styles/global.css'
+export const prerender = true
+const allPhotos = await getCollection('photos')
+---
+
+<BaseLayout>
+  <div class='flex h-screen justify-center'>
+    <div class='md:w-3/4 lg:w-2/3'>
+      <h1 class='my-10 text-center text-[40px] font-bold'>写真ブログ</h1>
+      <div class='flex justify-center'>
+        <div class='grid gap-6 lg:grid-cols-2 2xl:grid-cols-3'>
+          {
+            allPhotos.map((photo) => (
+              <PhotoCard
+                url={photo.slug}
+                imageUrl={photo.data.image.url}
+                camera={photo.data.camera}
+                setting={photo.data.setting}
+                lens={photo.data.lens}
+                location={photo.data.location}
+                pubDate={photo.data.pubDate}
+              />
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,10 +1,33 @@
 ---
-import Greeting from "../components/Greeting";
-import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "Home Page!!";
+import { getCollection } from 'astro:content'
+import BlogCard from 'src/components/blog/BlogCard.astro'
+import BaseLayout from 'src/layouts/BaseLayout.astro'
+import '../styles/global.css'
+export const prerender = true
+const allBlogs = await getCollection('blogs')
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
-  <Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there"]} />
+<BaseLayout>
+  <div class='flex h-screen justify-center'>
+    <div class='md:w-3/4 lg:w-2/3'>
+      <h1 class='my-10 text-center text-[40px] font-bold'>技術ブログ</h1>
+      <div class='flex justify-center'>
+        <div class='grid gap-6 lg:grid-cols-2 2xl:grid-cols-3'>
+          {
+            allBlogs.map((blog) => {
+              return (
+                <BlogCard
+                  url={blog.slug}
+                  imageUrl={blog.data.image.url}
+                  title={blog.data.title}
+                  description={blog.data.description}
+                  pubDate={blog.data.pubDate}
+                />
+              )
+            })
+          }
+        </div>
+      </div>
+    </div>
+  </div>
 </BaseLayout>
