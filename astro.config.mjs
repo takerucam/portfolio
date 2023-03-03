@@ -10,7 +10,7 @@ export default defineConfig({
   // これを入れるとSSRができるようになる
   output: 'server',
   adapter: cloudflare({
-    mode: 'advanced',
+    mode: 'directory',
   }),
   adapter: node({
     mode: 'standalone',
