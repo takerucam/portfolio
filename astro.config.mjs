@@ -8,12 +8,12 @@ import image from '@astrojs/image'
 // https://astro.build/config
 export default defineConfig({
   // これを入れるとSSRができるようになる
-  output: 'server',
-  adapter: cloudflare({
-    mode: 'directory',
-  }),
-  adapter: node({
-    mode: 'standalone',
-  }),
+  // output: 'server',
+  // adapter: cloudflare({
+  //   mode: 'directory',
+  // }),
+  // adapter: node({
+  //   mode: 'standalone',
+  // }),
   integrations: [tailwind(), preact(), image()],
 })
