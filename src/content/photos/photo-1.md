@@ -8,9 +8,9 @@ lens: 'FE 70-200mm F2.8 GM OSS II'
 location: '越前大仏'
 author: 'muchimuchi'
 image:
-  url: 'https://pbs.twimg.com/media/FqH7mlBaIAAK8nQ?format=jpg&name=4096x4096'
+  url: 'https://asia.olympus-imaging.com/content/000107506.jpg'
   alt: 'The Astro logo with the word One.'
-tags: ['sony', 'ポートレート']
+tags: ['sony', 'ポートレート', 'GM']
 ---
 
 最初の投稿
