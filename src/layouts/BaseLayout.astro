@@ -1,14 +1,35 @@
 ---
 import Header from 'src/components/Header'
 import '../styles/global.css'
+
+interface Props {
+  title?: string
+  siteTitle?: string
+}
+const { title, siteTitle } = Astro.props
+const imageUrl = title ? `https://portfolio-ogp-api.vercel.app/api/blog?title=${title}` : ''
 ---
 
 <html lang='ja'>
   <head>
     <meta charset='utf-8' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <meta name='viewport' content='width=device-width' />
     <meta name='generator' content={Astro.generator} />
+    {siteTitle ? <title>{siteTitle}</title> : null}
+    {
+      title ? (
+        <>
+          <meta name='description' content={imageUrl} />
+
+          <meta property='og:title' content={siteTitle} />
+          <meta property='og:site_name' content={siteTitle} />
+
+          <meta property='og:type' content='website' />
+          <meta property='og:image' content={imageUrl} />
+          <meta name='twitter:card' content='summary_large_image' />
+        </>
+      ) : null
+    }
   </head>
   <body>
     <Header client:load />
