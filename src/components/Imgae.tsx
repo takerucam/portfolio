@@ -12,7 +12,12 @@ const Image = ({ url, alt, style }: Props) => {
   const onLoad = () => {
     setIsLoaded(true)
   }
-  console.log(img.current)
+
+  useEffect(() => {
+    if (img.current?.complete) {
+      setIsLoaded(true)
+    }
+  }, [])
 
   return (
     <img
