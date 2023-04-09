@@ -18,10 +18,10 @@ const allBlogs = await getCollection('blogs')
               return (
                 <BlogCard
                   url={blog.slug}
-                  imageUrl={blog.data.image.url}
                   title={blog.data.title}
                   description={blog.data.description}
                   pubDate={blog.data.pubDate}
+                  tags={blog.data.tags}
                 />
               )
             })
