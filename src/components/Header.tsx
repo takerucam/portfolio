@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <header className='sticky top-0 flex h-16 items-center justify-between bg-headerBackground px-6'>
-      <p>muchimuchi.takeru.dev のブログ</p>
+      <img src='/muchimuchi_logo_body.svg' alt='logo' width={60} height={60} />
       <nav className='invisible sm:visible'>
         <ul className='flex gap-6'>
           <li className='flex h-8 items-center p-2 transition duration-500 hover:font-bold'>
