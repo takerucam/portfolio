@@ -14,17 +14,19 @@ const allPhotos = await getCollection('photos')
       <div class='flex justify-center'>
         <div class='grid gap-6 lg:grid-cols-2 2xl:grid-cols-3'>
           {
-            allPhotos.map((photo) => (
-              <PhotoCard
-                url={photo.slug}
-                imageUrl={photo.data.image.url}
-                camera={photo.data.camera}
-                setting={photo.data.setting}
-                lens={photo.data.lens}
-                location={photo.data.location}
-                pubDate={photo.data.pubDate}
-              />
-            ))
+            allPhotos
+              ? allPhotos.map((photo) => (
+                  <PhotoCard
+                    url={photo.slug}
+                    imageUrl={photo.data.image.url}
+                    camera={photo.data.camera}
+                    setting={photo.data.setting}
+                    lens={photo.data.lens}
+                    location={photo.data.location}
+                    pubDate={photo.data.pubDate}
+                  />
+                ))
+              : null
           }
         </div>
       </div>
