@@ -23,6 +23,6 @@ export const getLogo = (logo: string): string => {
     case 'TypeScript':
       return 'typescript-icon-round.svg'
     default:
-      return 'sample.jpg'
+      return ''
   }
 }

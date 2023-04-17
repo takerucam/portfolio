@@ -30,10 +30,19 @@ const imageUrl = title ? `https://portfolio-ogp-api.vercel.app/api/blog?title=${
         </>
       ) : null
     }
+    <link rel='icon' href='/muchimuchi_logo_face.png' />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap'
+      rel='stylesheet'
+    />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap'
+      rel='stylesheet'
+    />
   </head>
-  <body>
+  <body class='font-notoSerifJP'>
     <Header client:load />
-    <main>
+    <main class='pt-8'>
       <slot />
     </main>
   </body>

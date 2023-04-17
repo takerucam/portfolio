@@ -10,14 +10,18 @@ interface Props {
   tags: string[]
 }
 const { url, title, description, pubDate, tags } = Astro.props
-const logo = tags.length > 0 ? getLogo(tags[0]!) : ''
+const logo =
+  tags.length > 0 && getLogo(tags[0]!).length > 0
+    ? `logo/${getLogo(tags[0]!)}`
+    : 'muchimuchi_logo_face.png'
+const logoSize = tags.length > 0 && getLogo(tags[0]!).length > 0 ? 32 : 36
 ---
 
 <a
   href={`/blogs/${url}`}
-  class='duration-20 flex h-[110px] w-[350px] items-center rounded-lg border-[1px] border-border px-5 shadow-blog transition hover:bg-gray-100'
+  class='duration-20 flex h-[110px] w-[350px] items-center rounded-xl border-[1px] border-border bg-[#FCFCFC] px-5 transition hover:border-gray-400 hover:bg-white'
 >
-  <img src={`/logo/${logo}`} alt='icon' width={40} height={40} />
+  <img src={`/${logo}`} alt='icon' width={logoSize} height={logoSize} />
   <div class='w-full pl-5'>
     <p class='text-xl font-bold'>{title}</p>
     <p class='w-[200px] truncate pt-1 text-xs text-surfaceText'>{description}</p>
