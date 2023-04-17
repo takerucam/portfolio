@@ -40,10 +40,6 @@ export default function Header() {
               <img src='/menu-outline.svg' alt='' className='h-8 w-8' />
             </div>
           )}
-          <div
-            className={`fixed right-0 top-0 h-full duration-200 ease-in`}
-            onClick={handleClick}
-          />
         </div>
       </header>
       {isOpenMenu ? (
