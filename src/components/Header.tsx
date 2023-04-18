@@ -4,6 +4,13 @@ export default function Header() {
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false)
 
   const handleClick = () => {
+    if (isOpenMenu) {
+      document.body.style.overflow = 'unset'
+    } else {
+      if (typeof window != 'undefined' && window.document) {
+        document.body.style.overflow = 'hidden'
+      }
+    }
     setIsOpenMenu(!isOpenMenu)
   }
 
