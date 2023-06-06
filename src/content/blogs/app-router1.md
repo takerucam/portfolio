@@ -18,14 +18,14 @@ Next.js 13.4 で stable になった App Router（アップラウター） と�
 
 App Router では `app` フォルダ直下に置くフォルダをルートとして扱います。そのためフォルダ名がそのまま URL として使えます。アクセスするためには各フォルダに `index.js` を定義捨必要があります。例えば以下のようなツリーを考えます。
 
-<!-- ```bash
+```bash
 app
 ├── index.js
 ├── about
 │   └── index.js
 └── blog
     └── index.js
-``` -->
+```
 
 上記ツリーでは `/` にアクセスすると `app/index.js` が表示され、`/about` にアクセスすると `app/about/index.js` が表示されます。`/blog` にアクセスすると `app/blog/index.js` が表示されます。
 
