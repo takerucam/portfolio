@@ -22,6 +22,7 @@ module.exports = {
       fontFamily: {
         notoSerifJP: ['Noto Serif JP'],
         zenMaruGothic: ['Zen Maru Gothic'],
+        'gothic-marugo': ['ゴシック丸', 'fallback-font-name', 'sans-serif'],
       },
     },
   },
