@@ -1,6 +1,6 @@
 ---
 interface Props {
-  blog: CollectionEntry<'blogs'>['data']
+  frontmatter: CollectionEntry<'blogs'>['data']
 }
 import type { CollectionEntry } from 'astro:content'
 import BaseLayout from 'src/layouts/BaseLayout.astro'
@@ -11,7 +11,7 @@ const { frontmatter } = Astro.props
 <BaseLayout title={frontmatter.title} siteTitle={frontmatter.title}>
   <div class='m-10 flex justify-center'>
     <div>
-      <h1 class='mb-8 text-center text-4xl font-bold'>{frontmatter.title}</h1>
+      <h1 class='mb-16 text-center text-4xl font-bold'>{frontmatter.title}</h1>
       <article class='prose prose-lg'>
         <slot />
       </article>
