@@ -23,7 +23,7 @@ const logoSize = tags.length > 0 && getLogo(tags[0]!).length > 0 ? 32 : 36
 >
   <img src={`/${logo}`} alt='icon' width={logoSize} height={logoSize} />
   <div class='w-full pl-5'>
-    <p class='text-xl font-bold'>{title}</p>
+    <p class='text-xl font-bold text-title'>{title}</p>
     <p class='w-[200px] truncate pt-1 text-xs text-surfaceText'>{description}</p>
     <p class='text-end text-[10px] text-surfaceText'>{dayjs(pubDate).format('YYYY/MM/DD')}</p>
   </div>

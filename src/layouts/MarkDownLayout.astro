@@ -11,8 +11,8 @@ const { frontmatter } = Astro.props
 <BaseLayout title={frontmatter.title} siteTitle={frontmatter.title}>
   <div class='flex justify-center'>
     <div class='m-10 max-w-5xl'>
-      <h1 class='mb-16 text-center text-4xl font-bold'>{frontmatter.title}</h1>
-      <article class='prose prose-lg text-sm leading-relaxed md:text-lg'>
+      <h1 class='mb-16 text-center text-4xl font-bold text-title'>{frontmatter.title}</h1>
+      <article class='prose text-sm leading-relaxed md:text-lg'>
         <slot />
       </article>
     </div>

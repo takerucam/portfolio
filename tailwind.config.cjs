@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         headerBackground: '#F1E7DA',
         border: '#E7E7E7',
+        title: '#33374c',
         surfaceText: '#787878',
         black: '#000000',
         white: '#ffffff',
@@ -24,6 +25,19 @@ module.exports = {
         zenMaruGothic: ['Zen Maru Gothic'],
         'gothic-marugo': ['ゴシック丸', 'fallback-font-name', 'sans-serif'],
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.title'),
+            h1: {
+              color: theme('colors.title'),
+            },
+            h2: {
+              color: theme('colors.title'),
+            },
+          },
+        },
+      }),
     },
   },
   plugins: [require('@tailwindcss/typography')],
