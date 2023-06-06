@@ -18,14 +18,14 @@ Next.js 13.4 で stable になった App Router（アップラウター） と�
 
 App Router では `app` フォルダ直下に置くフォルダをルートとして扱います。そのためフォルダ名がそのまま URL として使えます。アクセスするためには各フォルダに `index.js` を定義捨必要があります。例えば以下のようなツリーを考えます。
 
-```bash
+<!-- ```bash
 app
 ├── index.js
 ├── about
 │   └── index.js
 └── blog
     └── index.js
-```
+``` -->
 
 上記ツリーでは `/` にアクセスすると `app/index.js` が表示され、`/about` にアクセスすると `app/about/index.js` が表示されます。`/blog` にアクセスすると `app/blog/index.js` が表示されます。
 
@@ -34,7 +34,11 @@ app
 以前の Next.js でもありましたが App Router にも `Layout.js` があります。`app` ディレクトリの直下には必ず `Layout.js` ですので注意です。
 
 ```js
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children
+}:{
+  children: React.ReactNode
+}) {
   return (
     <html>
       <body>{children}</body>
@@ -53,7 +57,7 @@ export const metaData: Metadata = {
   description: 'App Routerの紹介',
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {}
+export default function RootLayout({
 ```
 
 ## Nested Layout
@@ -65,10 +69,12 @@ app
 ├── index.js      # Layout1が適用
 ├── layout1.js
 ├── about
-│   ├── index.js  # Layout1とLayout2が適用
+│   ├── index.js  # Layout1と
+│   │             # Layout2が適用
 │   └── Layout2.js
 └── blog
-    ├── index.js  # Layout1とLayout3が適用
+    ├── index.js  # Layout1と
+    │             # Layout3が適用
     └── Layout3.js
 ```
 
