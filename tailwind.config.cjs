@@ -35,6 +35,10 @@ module.exports = {
             h2: {
               color: theme('colors.title'),
             },
+            pre: {
+              whiteSpace: 'pre-wrap',
+              wordBreak: 'break-all',
+            },
           },
         },
       }),

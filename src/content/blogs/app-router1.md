@@ -34,11 +34,7 @@ app
 以前の Next.js でもありましたが App Router にも `Layout.js` があります。`app` ディレクトリの直下には必ず `Layout.js` ですので注意です。
 
 ```js
-export default function RootLayout({
-  children
-}:{
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }:{ children: React.ReactNode }) {
   return (
     <html>
       <body>{children}</body>
@@ -57,7 +53,7 @@ export const metaData: Metadata = {
   description: 'App Routerの紹介',
 }
 
-export default function RootLayout({
+export default function RootLayout({ children }:{ children: React.ReactNode }) {
 ```
 
 ## Nested Layout
