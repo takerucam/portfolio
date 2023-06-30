@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/MarkDownLayout.astro'
 title: 'Next.jsのApp Routerを触ってみた1'
-pubDate: '2023-06-6'
+pubDate: '2023-06-06'
 description: 'App Router と Layout の基礎についての紹介です'
 author: 'muchimuchi'
 # image:
