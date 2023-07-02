@@ -147,9 +147,9 @@ void _callHello() async {
   }
 ```
 
-では記事を取得する処理を追加しましょう。 `final result = await client.example.hello(_textEditingController.text);` の下に以下のコードを追加してください。
-
+では記事を取得する処理を追加しましょう。
 ```dart
+final result = await client.example.hello(_textEditingController.text);
 final resultArticle = await client.example.getArticle(1);
 print(resultArticle);
 ```
