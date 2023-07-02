@@ -169,6 +169,6 @@ print(resultArticle);
 
 <img src="https://res.cloudinary.com/dmrlpyjkl/image/upload/v1688294399/portfolio/blog/Next.js%E3%81%AEApp%20Router%E3%82%92%E8%A7%A6%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2023-07-02_19.39.48_sa9jce.png">
 
-以上が Serverpod を触ってみたになります。Dart でもサーバーサイドをかけるというのはいいですね。次回は DRUD 操作をしてみたいと思います。
+以上が Serverpod を触ってみたになります。Dart でもサーバーサイドをかけるというのはいいですね。次回は CRUD 操作をしてみたいと思います。
 
 - [github](https://github.com/takerucam/study_serverpod)
