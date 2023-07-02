@@ -22,6 +22,8 @@ export const getLogo = (logo: string): string => {
       return 'tailwindcss-icon.svg'
     case 'TypeScript':
       return 'typescript-icon-round.svg'
+    case 'Dart':
+      return 'dart.svg'
     default:
       return ''
   }
